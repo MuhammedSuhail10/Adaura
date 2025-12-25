@@ -16,13 +16,11 @@
         <div class="hidden lg:block">
             <nav class="hidden lg:flex gap-10 text-[13pt] font-semibold"
                 :class="isScrolled ? 'text-black/60 ' : 'text-white/60'">
-                <NuxtLink class="hover:text-[#669bbc] text-[1.2em]" active-class="text-[#669bbc] font-semibold" exact
-                    to="/">Home</NuxtLink>
-                <NuxtLink class="hover:text-[#669bbc] text-[1.2em]" active-class="text-[#669bbc] font-semibold" exact
+                <NuxtLink class="hover:text-[#669bbc] " active-class="text-[#669bbc] font-semibold" exact
                     to="/about">About</NuxtLink>
-                <NuxtLink class="hover:text-[#669bbc] text-[1.2em]" active-class="text-[#669bbc] font-semibold" exact
+                <NuxtLink class="hover:text-[#669bbc] " active-class="text-[#669bbc] font-semibold" exact
                     to="/projects">Projects</NuxtLink>
-                <NuxtLink class="hover:text-[#669bbc] text-[1.2em]" active-class="text-[#669bbc] font-semibold" exact
+                <NuxtLink class="hover:text-[#669bbc] " active-class="text-[#669bbc] font-semibold" exact
                     to="/contact">Contact</NuxtLink>
             </nav>
         </div>
