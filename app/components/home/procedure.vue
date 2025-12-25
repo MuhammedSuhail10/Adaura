@@ -1,5 +1,34 @@
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+
+const emit = defineEmits(['enter']);
+const sectionRef = ref(null);
+let observer = null;
+
+onMounted(() => {
+    observer = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting) {
+                emit('enter');
+            }
+        },
+        { threshold: 0.3 }
+    );
+
+    if (sectionRef.value) {
+        observer.observe(sectionRef.value);
+    }
+});
+
+onUnmounted(() => {
+    if (observer && sectionRef.value) {
+        observer.unobserve(sectionRef.value);
+    }
+});
+</script>
+
 <template>
-    <div class="xl:px-[10em] lg:px-[5em] px-[1em] lg:py-[5em] py-[2em]">
+    <div ref="sectionRef" class="xl:px-[10em] lg:px-[5em] px-[1em] lg:py-[5em] py-[2em]">
         <h2 class="text-center lg:text-[35pt] text-[25pt] lg:px-[5em] font-bold">
             We See, What <span class="italic font-extralight">Others Miss</span>
         </h2>
