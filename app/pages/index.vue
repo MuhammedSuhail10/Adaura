@@ -24,8 +24,8 @@ const handleBackgroundChange = (color: string) => {
         <div class="xl:mt-[70vh] lg:mt-[65vh] mt-[25vh]">
             <LazyHomeAbout @enter="handleBackgroundChange('bg-[#f8f8f8]')" />
         </div>
-        <LazyHomeProjects />
-        <LazyHomeProcedure />
-        <LazyLinksFooter />
+        <LazyHomeProjects @enter="handleBackgroundChange('bg-[#f8f8f8]')" />
+        <LazyHomeProcedure @enter="handleBackgroundChange('bg-[#f8f8f8]')" />
+        <LazyLinksFooter @enter="handleBackgroundChange('bg-black')" />
     </div>
 </template>
